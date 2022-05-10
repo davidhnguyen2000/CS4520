@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Practice extends AppCompatActivity {
     String TAG = "demo";
@@ -23,14 +24,14 @@ public class Practice extends AppCompatActivity {
         buttonLogCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onClick: ");
+                Log.d(TAG, "Practice!Practice!!Practice!!!");
             }
         });
 
         buttonToast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(Practice.this, "Now push to GitHub and Submit!", Toast.LENGTH_LONG).show();
             }
         });
     }
