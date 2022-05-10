@@ -3,6 +3,13 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        Signature {
+            storePassword 'suminB29'
+            keyPassword 'suminB29'
+            keyAlias 'David'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
