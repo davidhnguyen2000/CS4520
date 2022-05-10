@@ -2,12 +2,14 @@ package com.example.inclassassignments;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 public class Practice extends AppCompatActivity {
-
+    String TAG = "demo";
     Button buttonLogCat;
     Button buttonToast;
     @Override
@@ -21,7 +23,7 @@ public class Practice extends AppCompatActivity {
         buttonLogCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.d(TAG, "onClick: ");
             }
         });
 
