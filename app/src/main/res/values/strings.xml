@@ -3,4 +3,6 @@
     <string name="practice_titile">Practice</string>
     <string name="logCatTitle">Log Cat</string>
     <string name="toastButtonTitle">Toast</string>
+    <string name="InClass1Title">In Class 01</string>
+    <string name="buttonCalculateBmiText">Calculate BMI</string>/>
 </resources>
