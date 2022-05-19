@@ -19,9 +19,13 @@ public class Profile implements Serializable {
         } else {
             this.avatarId = avatarId;
         }
-        if (operatingSystem != R.id.radioButtonIOS && operatingSystem != R.id.radioButtonAndroid) {
+        if (operatingSystem != R.id.radioButtonIOS
+                && operatingSystem != R.id.radioButtonAndroid
+                && operatingSystem != R.id.radioButtonFragmentIOS
+                && operatingSystem != R.id.radioButtonFragmentAndroid) {
             throw new IllegalArgumentException("Invalid operatingSystem");
-        } else if (operatingSystem == R.id.radioButtonAndroid) {
+        } else if (operatingSystem == R.id.radioButtonAndroid
+                || operatingSystem == R.id.radioButtonFragmentAndroid ) {
             this.operatingSystem = "Android";
         } else {
             this.operatingSystem = "iOS";

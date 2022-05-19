@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InClassAssignments">
         <activity
+            android:name=".InClass03"
+            android:exported="false" />
+        <activity
             android:name=".InClass02DisplayActivity"
             android:exported="false" />
         <activity

@@ -4,5 +4,10 @@
     <string name="logCatTitle">Log Cat</string>
     <string name="toastButtonTitle">Toast</string>
     <string name="InClass1Title">In Class 01</string>
-    <string name="buttonCalculateBmiText">Calculate BMI</string>/>
+    <string name="InClass2Title">In Class 02</string>
+    <string name="InClass3Title">In Class 03</string>
+    <string name="buttonCalculateBmiText">Calculate BMI</string>
+    <string name="submitText">Submit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>/>
 </resources>

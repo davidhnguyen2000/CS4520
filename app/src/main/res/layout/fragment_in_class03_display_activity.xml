@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".InClass03Display">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewFragmentDisplayAvatar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/avatar_f_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewFragmentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:text="name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewFragmentDispalyName"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewFragmentDisplayAvatar" />
+
+        <TextView
+            android:id="@+id/textViewFragmentDispalyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Name: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewFragmentName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewFragmentName" />
+
+        <TextView
+            android:id="@+id/textViewFragmentDisplayEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewFragmentEmail"
+            app:layout_constraintStart_toStartOf="@+id/textViewFragmentDispalyName"
+            app:layout_constraintTop_toTopOf="@+id/textViewFragmentEmail" />
+
+        <TextView
+            android:id="@+id/textViewFragmentEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="email"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewFragmentDisplayEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFragmentName" />
+
+        <TextView
+            android:id="@+id/textViewFragmentDispayOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I use"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewFragmentDisplayEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFragmentEmail" />
+
+        <TextView
+            android:id="@+id/textViewFragmentDisplayMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I am"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewFragmentDispayOS"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFragmentDispayOS" />
+
+        <ImageView
+            android:id="@+id/imageViewFragmentDisplayMood"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/happy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFragmentDisplayMood" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
