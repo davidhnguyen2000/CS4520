@@ -121,6 +121,27 @@ public class InClass03Main extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        switch (avatarNumber) {
+            case 0: imageViewAvatar.setImageResource(R.drawable.select_avatar);
+                break;
+            case 1: imageViewAvatar.setImageResource(R.drawable.avatar_f_1);
+                break;
+            case 2: imageViewAvatar.setImageResource(R.drawable.avatar_f_2);
+                break;
+            case 3: imageViewAvatar.setImageResource(R.drawable.avatar_f_3);
+                break;
+            case 4: imageViewAvatar.setImageResource(R.drawable.avatar_m_1);
+                break;
+            case 5: imageViewAvatar.setImageResource(R.drawable.avatar_m_2);
+                break;
+            case 6: imageViewAvatar.setImageResource(R.drawable.avatar_m_3);
+                break;
+        }
+    }
+
     // return true if the inputted name is in the format abc@def.xyz
     private boolean checkEmail(String email) {
         boolean containsAt = email.contains("@");
@@ -139,22 +160,6 @@ public class InClass03Main extends Fragment {
     }
 
     public void updateValues(int avatarNumber) {
-        switch (avatarNumber) {
-            case 0: imageViewAvatar.setImageResource(R.drawable.select_avatar);
-                break;
-            case 1: imageViewAvatar.setImageResource(R.drawable.avatar_f_1);
-                break;
-            case 2: imageViewAvatar.setImageResource(R.drawable.avatar_f_2);
-                break;
-            case 3: imageViewAvatar.setImageResource(R.drawable.avatar_f_3);
-                break;
-            case 4: imageViewAvatar.setImageResource(R.drawable.avatar_m_1);
-                break;
-            case 5: imageViewAvatar.setImageResource(R.drawable.avatar_m_2);
-                break;
-            case 6: imageViewAvatar.setImageResource(R.drawable.avatar_m_3);
-                break;
-        }
         this.avatarNumber = avatarNumber;
     }
 

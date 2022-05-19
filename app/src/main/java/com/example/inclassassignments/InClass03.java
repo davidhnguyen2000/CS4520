@@ -2,6 +2,7 @@ package com.example.inclassassignments;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class InClass03 extends AppCompatActivity implements InClass03Main.IFromMainToActivity, InClass03SelectAvatar.IFromSelectAvatarToActivity {
 
@@ -17,13 +18,8 @@ public class InClass03 extends AppCompatActivity implements InClass03Main.IFromM
         main = new InClass03Main();
         display = new InClass03Display();
         selectAvatar = new InClass03SelectAvatar();
-
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragmentContainer, main)
-                .commit();
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragmentContainer, display)
-                .hide(display)
                 .commit();
     }
 
@@ -32,19 +28,13 @@ public class InClass03 extends AppCompatActivity implements InClass03Main.IFromM
         if (submitClick && profile != null) {
             setTitle("Display Activity");
             getSupportFragmentManager().beginTransaction()
-                    .show(display)
-                    .commit();
-            getSupportFragmentManager().beginTransaction()
-                    .hide(main)
+                    .replace(R.id.fragmentContainer, display)
                     .commit();
             display.updateValues(profile);
         } else if (avatarClick) {
             setTitle("Select Avatar");
             getSupportFragmentManager().beginTransaction()
-                    .hide(main)
-                    .commit();
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragmentContainer, selectAvatar)
+                    .replace(R.id.fragmentContainer, selectAvatar)
                     .commit();
         }
     }
@@ -53,10 +43,7 @@ public class InClass03 extends AppCompatActivity implements InClass03Main.IFromM
     public void fromSelectAvatarFragment(int avatarNumber) {
         setTitle("Edit Profile Activity");
         getSupportFragmentManager().beginTransaction()
-                .remove(selectAvatar)
-                .commit();
-        getSupportFragmentManager().beginTransaction()
-                .show(main)
+                .replace(R.id.fragmentContainer, main)
                 .commit();
         main.updateValues(avatarNumber);
     }

@@ -1,7 +1,9 @@
 package com.example.inclassassignments;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -23,10 +25,18 @@ public class InClass03Display extends Fragment {
     TextView OS;
     TextView mood;
     ImageView moodImage;
+    String displayOS;
+    String displayMood;
+    String emailVal;
+    String nameVal;
+    int moodVal;
+    int avatarId;
+
 
     public InClass03Display() {
         // Required empty public constructor
     }
+
     public static InClass03Display newInstance() {
         return new InClass03Display();
     }
@@ -45,12 +55,12 @@ public class InClass03Display extends Fragment {
         return rootView;
     }
 
-    public void updateValues(Profile profile) {
-        String displayOS = "I use " + profile.operatingSystem;
-        String displayMood = "I am " + profile.getMood();
-        email.setText(profile.email);
-        name.setText(profile.name);
-        switch (profile.avatarId) {
+    @Override
+    public void onStart() {
+        super.onStart();
+        name.setText(nameVal);
+        email.setText(emailVal);
+        switch (avatarId) {
             case 1: avatar.setImageResource(R.drawable.avatar_f_1);
                 break;
             case 2: avatar.setImageResource(R.drawable.avatar_f_2);
@@ -66,7 +76,7 @@ public class InClass03Display extends Fragment {
         }
         OS.setText(displayOS);
         mood.setText(displayMood);
-        switch (profile.mood) {
+        switch (moodVal) {
             case 0: moodImage.setImageResource(R.drawable.angry);
                 break;
             case 1: moodImage.setImageResource(R.drawable.sad);
@@ -76,5 +86,14 @@ public class InClass03Display extends Fragment {
             case 3: moodImage.setImageResource(R.drawable.awesome);
                 break;
         }
+    }
+
+    public void updateValues(Profile profile) {
+        displayOS = "I use " + profile.operatingSystem;
+        displayMood = "I am " + profile.getMood();
+        emailVal = profile.email;
+        nameVal = profile.name;
+        avatarId = profile.avatarId;
+        moodVal = profile.mood;
     }
 }
