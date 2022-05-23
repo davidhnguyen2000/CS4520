@@ -9,5 +9,7 @@
     <string name="buttonCalculateBmiText">Calculate BMI</string>
     <string name="submitText">Submit</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>/>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="InClass04Title">In Classs 04</string>
+    <string name="GenerateNumberButtonTitle">Generate Number</string>
 </resources>
