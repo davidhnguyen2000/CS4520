@@ -14,6 +14,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -85,14 +86,31 @@ public class InClass04 extends AppCompatActivity {
             public boolean handleMessage(@NonNull Message msg) {
                 switch(msg.what) {
                     case HeavyWork.STATUS_PROGRESS:
-                        double progress = (double) msg.getData().getInt(HeavyWork.KEY_PROGRESS) / complexity;
+                        double progress = msg.getData().getDouble(HeavyWork.KEY_PROGRESS);
                         progressBarHeavyWork.setProgress((int) (progress * 100));
                         break;
                     case HeavyWork.STATUS_END:
                         progressBarHeavyWork.setVisibility(View.GONE);
-                        String minText = "" + msg.getData().getDouble(HeavyWork.KEY_MIN);
-                        String maxText = "" + msg.getData().getDouble(HeavyWork.KEY_MAX);
-                        String averageText = "" + msg.getData().getDouble(HeavyWork.KEY_AVERAGE);
+                        ArrayList<Double> numbers = (ArrayList<Double>) msg.getData().getSerializable(HeavyWork.KEY_DATA);
+                        double currentNum = numbers.get(0);
+                        double maxNum = currentNum;
+                        double minNum = currentNum;
+                        double sum = 0;
+                        for (int i = 0; i < numbers.size(); i ++) {
+                            currentNum = numbers.get(i);
+                            sum += currentNum;
+                            if (currentNum > maxNum)
+                                maxNum = currentNum;
+                            if (currentNum < minNum)
+                                minNum = currentNum;
+                        }
+                        double averageNum = sum / numbers.size();
+                        averageNum = (double) Math.round(averageNum * 100) / 100;
+                        minNum = (double) Math.round(minNum * 100) / 100;
+                        maxNum = (double) Math.round(maxNum * 100) / 100;
+                        String minText = "" + minNum;
+                        String maxText = "" + maxNum;
+                        String averageText = "" + averageNum;
                         min.setText(minText);
                         max.setText(maxText);
                         average.setText(averageText);
