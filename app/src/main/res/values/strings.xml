@@ -10,6 +10,8 @@
     <string name="submitText">Submit</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="InClass04Title">In Classs 04</string>
+    <string name="InClass04Title">In Class 04</string>
     <string name="GenerateNumberButtonTitle">Generate Number</string>
+    <string name="InClass05Title">In Class 05</string>
+    <string name="ButtonGo">Go</string>
 </resources>

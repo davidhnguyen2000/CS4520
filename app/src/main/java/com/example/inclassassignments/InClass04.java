@@ -1,3 +1,8 @@
+/*
+David Nguyen
+In Class 04
+ */
+
 package com.example.inclassassignments;
 
 import androidx.annotation.NonNull;
