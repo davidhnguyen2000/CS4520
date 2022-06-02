@@ -52,7 +52,6 @@ public class InClass06ViewArticle extends Fragment {
 
     public InClass06ViewArticle(TopHeadLines headlines) {
         this.headlines = headlines;
-        Log.d("debug", "InClass06ViewArticle: " + this.headlines.toString());
     }
 
     public static InClass06ViewArticle newInstance(String param1, String param2) {

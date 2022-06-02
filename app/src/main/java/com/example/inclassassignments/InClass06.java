@@ -186,7 +186,6 @@ class ArticleGetter implements Runnable {
         } else {
             url = "https://newsapi.org/v2/top-headlines?apiKey=7a389c10538d49b68c1a76ad08322e19";
         }
-        Log.d("debug", "getTopHeadlines: url: " + url);
         Request request = new Request.Builder()
                 .url(url)
                 .build();
