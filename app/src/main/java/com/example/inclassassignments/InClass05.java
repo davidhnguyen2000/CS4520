@@ -15,7 +15,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,7 +63,7 @@ public class InClass05 extends AppCompatActivity {
         imageDisplay = findViewById(R.id.imageViewDisplay);
         loading = findViewById(R.id.progressBarLoading);
         loadingText = findViewById(R.id.textViewLoading);
-        backButton = findViewById(R.id.imageViewBack);
+        backButton = findViewById(R.id.imageViewBackButton);
         nextButton = findViewById(R.id.imageViewNext);
         imageDisplay.setVisibility(View.GONE);
         loading.setVisibility(View.GONE);
