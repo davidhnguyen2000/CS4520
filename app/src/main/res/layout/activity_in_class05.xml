@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InClass05">
+    tools:context=".InClass05.InClass05">
 
     <EditText
         android:id="@+id/editTextSearch"

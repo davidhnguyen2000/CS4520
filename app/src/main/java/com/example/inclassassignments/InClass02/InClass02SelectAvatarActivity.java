@@ -3,12 +3,14 @@ David Nguyen
 Assignment 02
  */
 
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass02;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import com.example.inclassassignments.R;
 
 public class InClass02SelectAvatarActivity extends AppCompatActivity {
 

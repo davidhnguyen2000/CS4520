@@ -3,13 +3,15 @@ David Nguyen
 Assignment 02
  */
 
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.inclassassignments.R;
 
 public class InClass02DisplayActivity extends AppCompatActivity {
 

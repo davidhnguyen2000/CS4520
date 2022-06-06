@@ -3,7 +3,7 @@ By David Nguyen and Andrew Chin
 In Class Assignment 06
  */
 
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass06;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,13 +11,14 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.inclassassignments.R;
 import com.squareup.picasso.Picasso;
 
 public class InClass06ViewArticle extends Fragment {

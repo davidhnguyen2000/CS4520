@@ -1,4 +1,4 @@
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass06;
 
 public class Source {
     int id;

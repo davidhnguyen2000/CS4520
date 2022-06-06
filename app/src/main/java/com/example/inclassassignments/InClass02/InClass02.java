@@ -3,7 +3,7 @@ David Nguyen
 Assignment 02
  */
 
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +16,8 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.inclassassignments.R;
 
 public class InClass02 extends AppCompatActivity {
 

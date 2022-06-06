@@ -14,31 +14,34 @@
         android:theme="@style/Theme.InClassAssignments"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".InClass06"
+            android:name=".InClass07.InClass07"
             android:exported="false" />
         <activity
-            android:name=".InClass05"
+            android:name=".InClass06.InClass06"
             android:exported="false" />
         <activity
-            android:name=".InClass04"
+            android:name=".InClass05.InClass05"
             android:exported="false" />
         <activity
-            android:name=".InClass03"
+            android:name=".InClass04.InClass04"
             android:exported="false" />
         <activity
-            android:name=".InClass02DisplayActivity"
+            android:name=".InClass03.InClass03"
             android:exported="false" />
         <activity
-            android:name=".InClass02SelectAvatarActivity"
+            android:name=".InClass02.InClass02DisplayActivity"
             android:exported="false" />
         <activity
-            android:name=".InClass02"
+            android:name=".InClass02.InClass02SelectAvatarActivity"
             android:exported="false" />
         <activity
-            android:name=".InClass01"
+            android:name=".InClass02.InClass02"
             android:exported="false" />
         <activity
-            android:name=".Practice"
+            android:name=".InClass01.InClass01"
+            android:exported="false" />
+        <activity
+            android:name=".Practice.Practice"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

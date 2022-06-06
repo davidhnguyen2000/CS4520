@@ -3,7 +3,7 @@ David Nguyen
 Assignment 01
  */
 
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.inclassassignments.R;
 
 public class InClass01 extends AppCompatActivity {
 

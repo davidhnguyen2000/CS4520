@@ -1,8 +1,10 @@
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass03;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
+import com.example.inclassassignments.InClass02.Profile;
+import com.example.inclassassignments.R;
 
 public class InClass03 extends AppCompatActivity implements InClass03Main.IFromMainToActivity, InClass03SelectAvatar.IFromSelectAvatarToActivity {
 

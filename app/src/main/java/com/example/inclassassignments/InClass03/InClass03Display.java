@@ -1,24 +1,17 @@
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass03;
 
-import android.content.Context;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
-import java.io.IOException;
+import com.example.inclassassignments.InClass02.Profile;
+import com.example.inclassassignments.R;
 
 /**
  * A simple {@link Fragment} subclass.

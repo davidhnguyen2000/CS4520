@@ -15,4 +15,12 @@
     <string name="InClass05Title">In Class 05</string>
     <string name="ButtonGo">Go</string>
     <string name="InClass06Title">In Class 06</string>
+    <string name="InClass07Title">In Class 07</string>
+    <string name="ButtonLogin">Log In</string>
+    <string name="buttonSignUp">Sign Up</string>
+    <string name="ButtonBack">Back</string>
+    <string name="buttonViewNotes">View Notes</string>
+    <string name="buttonLogout">Log Out</string>
+    <string name="buttonDeleteNote">Delete</string>
+    <string name="buttonAddNote">Add Note</string>
 </resources>

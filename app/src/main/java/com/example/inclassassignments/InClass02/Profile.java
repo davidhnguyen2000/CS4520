@@ -1,6 +1,8 @@
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass02;
 
 import androidx.annotation.NonNull;
+
+import com.example.inclassassignments.R;
 
 import java.io.Serializable;
 

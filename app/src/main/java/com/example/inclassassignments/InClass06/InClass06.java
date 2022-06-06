@@ -2,7 +2,7 @@
 By David Nguyen and Andrew Chin
 In Class Assignment 06
  */
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass06;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,17 +11,16 @@ import androidx.fragment.app.FragmentContainerView;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.inclassassignments.R;
 import com.google.gson.Gson;
 
 import java.io.IOException;

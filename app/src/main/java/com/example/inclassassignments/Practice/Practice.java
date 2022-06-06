@@ -1,13 +1,14 @@
-package com.example.inclassassignments;
+package com.example.inclassassignments.Practice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.inclassassignments.R;
 
 public class Practice extends AppCompatActivity {
     String TAG = "demo";

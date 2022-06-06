@@ -3,7 +3,7 @@ David Nguyen
 In Class 05
  */
 
-package com.example.inclassassignments;
+package com.example.inclassassignments.InClass05;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.inclassassignments.R;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
