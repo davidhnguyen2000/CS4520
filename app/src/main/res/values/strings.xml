@@ -23,4 +23,8 @@
     <string name="buttonLogout">Log Out</string>
     <string name="buttonDeleteNote">Delete</string>
     <string name="buttonAddNote">Add Note</string>
+    <string name="InClass08Title">In Class 08</string>
+    <string name="buttonRegister">Register</string>
+    <string name="buttonSend">Send</string>
+    <string name="buttonBackToChatList">Back</string>
 </resources>

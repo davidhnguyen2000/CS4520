@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InClass08.InClass08Login">
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextUsernameLoginFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLogin" />
+
+    <EditText
+        android:id="@+id/editTextPasswordLoginFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextUsernameLoginFragment"
+        app:layout_constraintStart_toStartOf="@+id/editTextUsernameLoginFragment"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsernameLoginFragment" />
+
+    <Button
+        android:id="@+id/buttonLoginLoginFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/ButtonLogin"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordLoginFragment"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordLoginFragment"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordLoginFragment" />
+
+    <Button
+        android:id="@+id/buttonRegisterFromLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/buttonRegister"
+        app:layout_constraintEnd_toEndOf="@+id/buttonLoginLoginFragment"
+        app:layout_constraintStart_toStartOf="@+id/buttonLoginLoginFragment"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLoginLoginFragment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
