@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,14 +15,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import org.w3c.dom.Document;
-
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -146,14 +143,22 @@ public class InClass08Register extends Fragment {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         List<DocumentSnapshot> docs = queryDocumentSnapshots.getDocuments();
-                        Log.d("debug", "onSuccess: " + docs);
                         for (int i = 0; i < docs.size(); i++) {
                             DocumentSnapshot userDoc = docs.get(i);
                             DocumentReference collectionReference = database.collection("users").document(docRef.getId()).collection("chats").document(userDoc.getId());
                             collectionReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                 @Override
                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
-                                    Log.d("debug", "onSuccess: added a user chat");
+                                    DocumentReference docRef = documentSnapshot.getReference();
+                                    Map<String, Object> blank = new HashMap<>();
+                                    ArrayList<String> sentMessages = new ArrayList<>();
+                                    ArrayList<Timestamp> timestamps = new ArrayList<>();
+                                    blank.put("sentMessages", sentMessages);
+                                    blank.put("timestamps", timestamps);
+                                    docRef.set(blank).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {}
+                                    });
                                 }
                             });
                         }

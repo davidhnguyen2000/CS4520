@@ -1,12 +1,8 @@
 package com.example.inclassassignments.InClass08;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
-import com.example.inclassassignments.InClass07.InClass07Register;
 import com.example.inclassassignments.R;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class InClass08 extends AppCompatActivity implements InClass08Register.IFromRegisterFragment, InClass08Login.IFromLoginFragment, ChatAdapter.IFromAuthUserAdapter, InClass08Chat.IFromChatFragment {
 
