@@ -14,7 +14,7 @@ import com.example.inclassassignments.InClass04.InClass04;
 import com.example.inclassassignments.InClass05.InClass05;
 import com.example.inclassassignments.InClass06.InClass06;
 import com.example.inclassassignments.InClass07.InClass07;
-import com.example.inclassassignments.InClass08.InClass08;
+import com.example.inclassassignments.InClass08and09.InClass08;
 import com.example.inclassassignments.Practice.Practice;
 
 public class MainActivity extends AppCompatActivity {

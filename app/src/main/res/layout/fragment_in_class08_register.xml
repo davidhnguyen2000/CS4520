@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InClass08.InClass08Register">
+    tools:context=".InClass08and09.InClass08Register">
 
     <EditText
         android:id="@+id/editTextFirstName"
@@ -16,9 +16,9 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfileRegister" />
 
     <EditText
         android:id="@+id/editTextLastName"
@@ -102,4 +102,14 @@
         app:layout_constraintEnd_toEndOf="@+id/buttonRegisterNewUser"
         app:layout_constraintStart_toStartOf="@+id/buttonRegisterNewUser"
         app:layout_constraintTop_toBottomOf="@+id/buttonRegisterNewUser" />
+
+    <ImageView
+        android:id="@+id/imageViewProfileRegister"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegister"
+        tools:src="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

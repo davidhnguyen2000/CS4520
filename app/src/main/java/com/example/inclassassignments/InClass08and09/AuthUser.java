@@ -1,4 +1,4 @@
-package com.example.inclassassignments.InClass08;
+package com.example.inclassassignments.InClass08and09;
 
 public class AuthUser {
     private String firstName;

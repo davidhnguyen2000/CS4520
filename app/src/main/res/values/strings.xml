@@ -27,4 +27,9 @@
     <string name="buttonRegister">Register</string>
     <string name="buttonSend">Send</string>
     <string name="buttonBackToChatList">Back</string>
+    <string name="buttonSave">Save</string>
+    <string name="buttonCancel">Cancel</string>
+    <string name="buttonEditProfile">Profile</string>
+    <string name="buttonImage">Gallery</string>
+    <string name="buttonCamera">Camera</string>
 </resources>

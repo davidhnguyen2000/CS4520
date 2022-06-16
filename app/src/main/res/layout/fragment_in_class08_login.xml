@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InClass08.InClass08Login">
+    tools:context=".InClass08and09.InClass08Login">
 
     <TextView
         android:id="@+id/textViewLogin"

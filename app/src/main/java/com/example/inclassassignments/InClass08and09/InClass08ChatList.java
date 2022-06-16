@@ -1,5 +1,6 @@
-package com.example.inclassassignments.InClass08;
+package com.example.inclassassignments.InClass08and09;
 
+import android.content.Context;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 import com.example.inclassassignments.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -23,16 +26,28 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class InClass08ChatList extends Fragment {
-
+    private Button buttonEditProfile;
+    private Button buttonLogout;
     private RecyclerView recyclerViewChats;
     private RecyclerView.LayoutManager recyclerViewLayoutManager;
     private ChatAdapter chatAdapter;
     private String currentUsername;
     private Handler messageQueue;
     private ExecutorService threadPool;
+    private IFromChatListFragment sendData;
 
     public InClass08ChatList() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof IFromChatListFragment) {
+            sendData = (IFromChatListFragment) context;
+        } else {
+            throw new RuntimeException(context + " must implement IFromChatListFragment");
+        }
     }
 
     public static InClass08ChatList newInstance(String param1, String param2) {
@@ -48,6 +63,8 @@ public class InClass08ChatList extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_in_class08_chat_list, container, false);
+        buttonEditProfile = rootView.findViewById(R.id.buttonEditProfile);
+        buttonLogout = rootView.findViewById(R.id.buttonLogoutChat);
         recyclerViewChats = rootView.findViewById(R.id.recylcerViewChats);
         recyclerViewLayoutManager = new LinearLayoutManager(getContext());
         recyclerViewChats.setLayoutManager(recyclerViewLayoutManager);
@@ -58,6 +75,20 @@ public class InClass08ChatList extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        buttonEditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData.toEditProfile(currentUsername);
+            }
+        });
+
+        buttonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData.logout();
+            }
+        });
+
         messageQueue = new Handler(new Handler.Callback() {
             @Override
             public boolean handleMessage(@NonNull Message msg) {
@@ -82,6 +113,12 @@ public class InClass08ChatList extends Fragment {
     public void setCurrentUsername(String currentUsername) {
         this.currentUsername = currentUsername;
     }
+
+    public interface IFromChatListFragment {
+        void toEditProfile(String currentUsername);
+        void logout();
+    }
+
 }
 
 class ChatListGetter implements Runnable {
